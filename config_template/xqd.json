@@ -86,7 +86,7 @@
        },
        {
         "type":"urltest",
-        "tag":"节点选择",
+        "tag":"自动选择",
         "outbounds":[
           "{all}"
         ],
