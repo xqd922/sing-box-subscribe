@@ -1,22 +1,4 @@
 {
-    "log": {
-        "level": "info",
-        "timestamp": true
-      },
-      "experimental": {
-      "clash_api": {
-        "external_controller": "127.0.0.1:9090",
-        "external_ui": "ui",
-        "secret": "",
-        "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
-        "external_ui_download_detour": "direct",
-        "default_mode": "rule"
-      },
-    "cache_file": {
-      "enabled": true,
-      "store_fakeip": false
-      }
-    },
     "dns": {
       "servers": [
         {
@@ -103,18 +85,6 @@
         "default": "自动选择"
        },
        {
-        "type": "direct",
-        "tag": "direct"
-      },
-      {
-        "type": "block",
-        "tag": "block"
-      },
-      {
-        "type": "dns",
-        "tag": "dns-out"
-      },
-      {
         "type":"urltest",
         "tag":"节点选择",
         "outbounds":[
@@ -126,6 +96,18 @@
         "url": "http://www.gstatic.com/generate_204",
         "interval": "10m",
         "tolerance": 50
+        },
+        {
+        "type": "direct",
+        "tag": "direct"
+      },
+      {
+        "type": "block",
+        "tag": "block"
+      },
+      {
+        "type": "dns",
+        "tag": "dns-out"
       }
     ],
     "route": {
@@ -159,5 +141,10 @@
         }
       ],
       "auto_detect_interface": true
+    },
+    "experimental": {
+      "clash_api": {
+        "external_controller": "127.0.0.1:9090"
+      }
     }
   }
